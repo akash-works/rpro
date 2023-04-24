@@ -1,13 +1,11 @@
 version: '3'
 
 services:
-  # django:
-  #   image: django-docker:0.0.1
   web:
     build: .
     command: python manage.py runserver 0.0.0.0:8000
-    # volumes:
-    #   - .:/code
+    volumes:
+      - .:/rpro
     ports:
       - "8000:8000"
     # depends_on:
